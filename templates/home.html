@@ -5,6 +5,11 @@
 </head>
 <body>
     <h1>Random Post</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         <button type="submit">Retrieve</button>
