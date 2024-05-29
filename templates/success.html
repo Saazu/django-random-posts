@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Success</title>
+</head>
+<body>
+    <h1>Saved Random Posts</h1>
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        <p>Created at: {{ post.created_at }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
